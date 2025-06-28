@@ -29,15 +29,15 @@ export const useAuth = () => {
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
 
-  // Dummy users for demonstration
-  const dummyUsers = [
+  // Sample users for authentication
+  const users = [
     {
       id: '1',
       name: 'John Smith',
       email: 'john.smith@email.com',
       password: 'password123',
       accountNumber: 'SB-2024-001',
-      balance: 25750.50
+      balance: 2575050
     },
     {
       id: '2',
@@ -45,7 +45,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       email: 'sarah.johnson@email.com',
       password: 'secure456',
       accountNumber: 'SB-2024-002',
-      balance: 18920.75
+      balance: 1892075
     }
   ];
 
@@ -57,10 +57,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, []);
 
   const login = async (email: string, password: string): Promise<boolean> => {
-    // Simulate API call
+    // Simulate authentication process
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    const foundUser = dummyUsers.find(u => u.email === email && u.password === password);
+    const foundUser = users.find(u => u.email === email && u.password === password);
     
     if (foundUser) {
       const userSession = {

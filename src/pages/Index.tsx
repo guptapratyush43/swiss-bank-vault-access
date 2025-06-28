@@ -40,18 +40,23 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white font-uber">
+    <div className="min-h-screen font-uber">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
+      <section 
+        className="relative overflow-hidden py-20 lg:py-32 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.8), rgba(29, 78, 216, 0.8)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80')`
+        }}
+      >
         <div className="container mx-auto px-4">
           <div className="text-center animate-fade-in">
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               Welcome to
-              <span className="text-bank-blue-600 block">Swiss Bank</span>
+              <span className="text-blue-100 block">Swiss Bank</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
               Your trusted partner for secure banking solutions. Experience seamless financial management with our comprehensive suite of banking services designed for your peace of mind.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -61,7 +66,7 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="outline" className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto">
+                <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-bank-blue-600 text-lg px-8 py-4 w-full sm:w-auto">
                   New user? Contact Bank
                 </Button>
               </Link>
@@ -71,7 +76,12 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section 
+        className="py-20 bg-cover bg-center bg-no-repeat relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80')`
+        }}
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -84,7 +94,7 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="card-shadow hover:scale-105 transition-transform duration-300">
+              <Card key={index} className="card-shadow hover:scale-105 transition-transform duration-300 bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-6 text-center">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
@@ -97,7 +107,12 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-bank-blue-600 to-bank-blue-800">
+      <section 
+        className="py-20 bg-cover bg-center bg-no-repeat relative"
+        style={{
+          backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.9), rgba(29, 78, 216, 0.9)), url('https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80')`
+        }}
+      >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to Start Your Banking Journey?

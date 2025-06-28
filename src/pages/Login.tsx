@@ -74,7 +74,12 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-bank-blue-50 to-white flex items-center justify-center p-4">
+    <div 
+      className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center p-4"
+      style={{
+        backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.1), rgba(239, 246, 255, 0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80')`
+      }}
+    >
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
@@ -86,7 +91,7 @@ const Login = () => {
           </Link>
         </div>
 
-        <Card className="card-shadow">
+        <Card className="card-shadow bg-white/95 backdrop-blur-sm">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl font-bold text-gray-900">
               Secure Login
@@ -148,18 +153,6 @@ const Login = () => {
                   Contact Swiss Bank
                 </Link>
               </p>
-            </div>
-
-            {/* Demo Credentials */}
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-              <h4 className="text-sm font-semibold text-blue-800 mb-2">Demo Credentials:</h4>
-              <div className="text-xs text-blue-700 space-y-1">
-                <p><strong>Email:</strong> john.smith@email.com</p>
-                <p><strong>Password:</strong> password123</p>
-                <p className="mt-2"><strong>Or:</strong></p>
-                <p><strong>Email:</strong> sarah.johnson@email.com</p>
-                <p><strong>Password:</strong> secure456</p>
-              </div>
             </div>
           </CardContent>
         </Card>
