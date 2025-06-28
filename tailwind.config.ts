@@ -20,7 +20,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'uber': ['Inter', 'sans-serif'], // Using Inter as fallback for Uber Move
+				'uber': ['Roboto', 'Inter', 'sans-serif'], // Using Roboto as Uber Move alternative
 			},
 			colors: {
 				border: 'hsl(var(--border))',

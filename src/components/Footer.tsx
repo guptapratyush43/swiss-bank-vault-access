@@ -1,5 +1,6 @@
 
 import { Link } from 'react-router-dom';
+import BankLogo from './BankLogo';
 
 const Footer = () => {
   return (
@@ -8,11 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-bank-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
-              </div>
-              <span className="text-xl font-bold">Swiss Bank</span>
+            <div className="mb-4">
+              <BankLogo className="w-8 h-8" />
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Your trusted partner for secure banking solutions. We provide comprehensive financial services with the highest standards of security and customer care.
